@@ -1,0 +1,12 @@
+def Create_File():
+    try:
+        os.mkdir(CHEMIN+"\config")
+    except:
+        pass
+    try:
+        os.mkdir(CHEMIN+"\\assets")
+    except:
+        pass
+
+    if not os.path.isfile(CHEMIN+"\\assets\icon.png"):
+        urllib.request.urlretrieve("https://raw.githubusercontent.com/CloudDevX/Horizon/main/icon.png", CHEMIN+"\\assets\icon.png")
