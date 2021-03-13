@@ -8,5 +8,5 @@ def Create_File():
     except:
         pass
 
-    if not os.path.isfile(CHEMIN+"\\assets\icon.ico"):
-        urllib.request.urlretrieve("https://raw.githubusercontent.com/CloudDevX/Among-Us-Evolution/main/among-us.ico", CHEMIN+"\\assets\icon.ico")
+    if not os.path.isfile(CHEMIN+"\\assets\icon.png"):
+        urllib.request.urlretrieve("https://raw.githubusercontent.com/CloudDevX/Among-Us-Evolution/main/icon.png", CHEMIN+"\\assets\icon.png")
