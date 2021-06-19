@@ -137,6 +137,23 @@ class Utilities {
           }
         },
         {
+          opcode: 'index',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'Element [INDEX] of json list [LIST]',
+          arguments: {
+            START: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 5
+            },
+            STRING: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: '{"example":"True"}'
+            }
+          }
+        },
+        {
           opcode: 'currentMillisecond',
           blockType: Scratch.BlockType.REPORTER,
           text: 'current millisecond'
@@ -243,6 +260,10 @@ class Utilities {
 
   letters({STRING, START, END}) {
     return STRING.slice(Math.max(1, START) - 1, Math.min(STRING.length, END));
+  }
+  
+  index({INDEX , LIST}) {
+    return Object.values(LIST)[INDEX];
   }
 
   currentMillisecond() {
