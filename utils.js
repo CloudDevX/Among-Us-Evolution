@@ -280,8 +280,7 @@ class Utilities {
   }
   
   len({LIST}) {
-    a = Object.keys(JSON.parse(LIST));
-    return a.length;
+    return Object.keys(JSON.parse(LIST)).length;
   }
 
   currentMillisecond() {
