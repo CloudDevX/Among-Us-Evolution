@@ -154,6 +154,23 @@ class Utilities {
           }
         },
         {
+          opcode: 'id',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'Value of the element [INDEX] of json list [LIST]',
+          arguments: {
+            INDEX: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 0
+            },
+            LIST: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: '{"example":"True"}'
+            }
+          }
+        },
+        {
           opcode: 'len',
 
           blockType: Scratch.BlockType.REPORTER,
@@ -277,6 +294,10 @@ class Utilities {
   
   index({INDEX , LIST}) {
     return Object.keys(JSON.parse(LIST))[INDEX];
+  }
+  
+  id({INDEX , LIST}) {
+    return Object.values(JSON.parse(LIST))[INDEX];
   }
   
   len({LIST}) {
