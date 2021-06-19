@@ -154,6 +154,19 @@ class Utilities {
           }
         },
         {
+          opcode: 'len',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'Len of json list [LIST]',
+          arguments: {
+            LIST: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: '{"example":"False"}'
+            }
+          }
+        },
+        {
           opcode: 'currentMillisecond',
           blockType: Scratch.BlockType.REPORTER,
           text: 'current millisecond'
@@ -264,6 +277,11 @@ class Utilities {
   
   index({INDEX , LIST}) {
     return Object.keys(JSON.parse(LIST))[INDEX];
+  }
+  
+  len({LIST}) {
+    a = Object.keys(JSON.parse(LIST));
+    return a.length;
   }
 
   currentMillisecond() {
