@@ -145,7 +145,7 @@ class Utilities {
           arguments: {
             INDEX: {
               type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 5
+              defaultValue: 0
             },
             LIST: {
               type: Scratch.ArgumentType.STRING,
@@ -263,7 +263,7 @@ class Utilities {
   }
   
   index({INDEX , LIST}) {
-    return Object.values(JSON.parse(LIST))[INDEX];
+    return Object.keys(JSON.parse(LIST))[INDEX];
   }
 
   currentMillisecond() {
