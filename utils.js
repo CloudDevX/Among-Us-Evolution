@@ -348,7 +348,7 @@ Scratch.extensions.register(new Utilities());
 
 //other extension
 
-importScripts('https://cdnjs.cloudflare.com/ajax/libs/localforage/1.7.3/localforage.min.js')
+importScripts('https://cdnjs.cloudflare.com/ajax/libs/localforage/1.9.0/localforage.min.js')
 
 class LocalStorage {
   constructor () {}
