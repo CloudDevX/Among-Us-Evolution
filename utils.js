@@ -330,7 +330,7 @@ class Utilities {
       else if (typeof json === 'object') return JSON.stringify(json);
       else return json.toString();
     } catch (err) {
-      return '';
+      return err;
     }
   }
 
