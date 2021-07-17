@@ -36,7 +36,7 @@ class Utilities {
         {
           opcode: 'maj',
 
-          blockType: Scratch.BlockType.BOOLEAN,
+          blockType: Scratch.BlockType.REPORTER,
 
           text: 'Maj [A]',
           arguments: {
